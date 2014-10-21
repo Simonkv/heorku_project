@@ -18,3 +18,7 @@ Delete branch
 
 
 
+str.gsub(/\s+/m, ' ').strip.split(" ")
+
+returns 
+["aa", "bbb", "cc", "dd", "ee"]

@@ -1,11 +1,15 @@
 <p>
-  <strong>Title:</strong>
-  <%= @article.title %>
+  <strong>Problem:</strong>
+  <%= "Who gotta #{@article.title} ?" %>
 </p>
  
 <p>
-  <strong>Text:</strong>
-  <%= @article.text %>
+  <strong>Solution:</strong>
+  <%= "#{@article.text} gotta #{@article.title}" %>
+
+
+
+
 </p>
 
-<%= link_to "Comment section", articles_path %>
+<%= link_to "Previous problems", articles_path %>

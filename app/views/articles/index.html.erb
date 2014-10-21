@@ -1,17 +1,17 @@
-<h1>Listing articles</h1>
+<h1>WHO HAD TO DO IT</h1>
  
 <table>
   <tr>
-    <th>Title</th>
-    <th>Text</th>
+    <th>Problem</th>
+    <th>Solution</th>
   </tr>
  
   <% @articles.each do |article| %>
     <tr>
-      <td><%= article.title %></td>
-      <td><%= article.text %></td>
+      <td><%= "Who gotta #{article.title} ?" %></td>
+      <td><%= "#{article.text} gotta #{article.title}" %></td>
     </tr>
   <% end %>
 </table>
 
-<%= link_to "New comment", new_article_path %>
+<%= link_to "New problem?", new_article_path %>
