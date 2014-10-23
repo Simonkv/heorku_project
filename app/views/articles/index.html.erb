@@ -1,17 +1,25 @@
 <h1>WHO HAD TO DO IT</h1>
+
  
 <table>
   <tr>
     <th>Problem</th>
-    <th>Solution</th>
   </tr>
  
   <% @articles.each do |article| %>
-    <tr>
-      <td><%= "Who gotta #{article.title} ?" %></td>
-      <td><%= "#{article.text} gotta #{article.title}" %></td>
+    <tr> 
+      <td>
+        <div class = "article_title">
+          <%= "Who gotta #{article.title} ?" %>
+        </div>
+        <div class = "article_text">
+          <%= "#{article.text}" %>
+        </div>
+      </td>
+      
     </tr>
   <% end %>
 </table>
 
 <%= link_to "New problem?", new_article_path %>
+<%= link_to "Home page", root_path %>

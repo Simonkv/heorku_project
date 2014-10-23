@@ -1,8 +1,12 @@
 HerokuApp::Application.routes.draw do
+  get "about/index"
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
 resources :articles
+
+get 'welcome/index'
   # Sample of regular route:
   #   match 'products/:id' => 'catalog#view'
   # Keep in mind you can assign values other than :controller and :action

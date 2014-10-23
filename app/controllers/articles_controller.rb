@@ -1,4 +1,5 @@
 class ArticlesController < ApplicationController
+	
 	def new
 
 	end
@@ -7,9 +8,9 @@ class ArticlesController < ApplicationController
 		@article = Article.new(article_params)
 
 		my_text = @article.text.gsub(/\s+/m, ' ').strip.split(" ")
-		my_text = my_text.sample(1)
+		@article.text = my_text.sample(1)
 
-		@article.text= my_text
+		
 
 
 
