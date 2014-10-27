@@ -8,7 +8,7 @@ class ArticlesController < ApplicationController
 		@article = Article.new(article_params)
 
 		my_text = @article.text.split(" ")
-		
+
 		@article.text = my_text.sample
 
 		
@@ -17,7 +17,7 @@ class ArticlesController < ApplicationController
 
 		if @article.save
 
-			redirect_to @article
+			redirect_to articles_path
 		else
 			render 'new'
 			
@@ -28,8 +28,11 @@ class ArticlesController < ApplicationController
 		@article = Article.find(params[:id])
 	end
 
+	
+
 	def index
-		@articles = Article.all
+		@articles = Article.order('created_at DESC').first(10)
+
 	end
 
 	private
