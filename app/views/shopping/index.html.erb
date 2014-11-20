@@ -1,0 +1,24 @@
+
+<h1> Uoppgjort gjeld! </h1>
+
+
+<h3>
+
+<%= hvem_skylder_hvem %>
+</h3>
+
+<% @shopping.each do |shopping| %>
+	<div class= "shopping_index">
+		<%= shopping.person %>:
+		<%= shopping.title %>
+		<%= shopping.price %>
+
+	</div>
+
+<% end %>
+<div class="new_link">
+	<%= link_to "New", '/shopping/new' %>
+</div>
+
+
+

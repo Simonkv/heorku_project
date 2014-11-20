@@ -1,0 +1,28 @@
+<h1> New purchase </h1>
+<%= form_for :shopping, url: {action: "create"} do |f| %>
+
+	<p style = "height: 30px;">
+		<%= f.label "Item" %><br>
+		<%= f.text_field :title %>
+		
+	</p>
+
+	<p style = "height: 30px;">
+		<%= f.label "Price" %><br>
+		<%= f.text_field :price %>
+
+	</p>
+
+	<p>
+		<%= f.radio_button(:person, "Simon") %>
+		<%= f.label(:person, "Simon", value: "Simon") %>
+		<%= f.radio_button(:person, "Joachim") %>
+		<%= f.label(:person, "Joachim", value: "Joachim") %>
+	</p>
+
+	<p>
+		<%= f.submit "Save purchase!" %>
+	</p>
+
+
+<% end %>

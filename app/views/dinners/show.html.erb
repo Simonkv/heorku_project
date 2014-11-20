@@ -1,0 +1,11 @@
+
+
+<h1> <%= @dinner.title %> </h1>
+<p style= "height: 20px; border-bottom: 1px solid black;">
+	<%=@dinner.price%>kr total
+</p>
+<div class = "my_ingredients">
+	<%= @dinner.ingredients.gsub(/\r/, '<br/>').html_safe %>
+</div>
+
+

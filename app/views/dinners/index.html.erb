@@ -1,0 +1,17 @@
+
+<h1> Dinners </h1>
+
+<% @dinners.each do |dinner| %>
+	<div class = "dinner_index">
+	
+		<%= dinner.title %>
+		<%= dinner.price %> 
+		
+		<%= link_to 'Show', dinner %>
+	</div>
+
+
+<% end %>
+<div class="new_link">
+	<%= link_to "New", '/dinners/new' %>
+</div>

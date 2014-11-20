@@ -1,0 +1,21 @@
+<h1> New dish </h1>
+<%= form_for :dinner, url: dinners_path do |f| %>
+	<p style = "height: 30px;">
+		<%= f.label "Dish name" %><br>
+		<%= f.text_field :title %>
+		
+	</p>
+	<p style = "height: 30px;">
+		<%= f.label "Price" %><br>
+		<%= f.text_field :price %>
+
+	</p>
+	<p style = "height: 350px;">
+		<%= f.label "Ingredients" %><br>
+		<%= f.text_area :ingredients %>
+	</p>
+
+	<p>
+		<%= f.submit "Save dish!" %>
+	</p>
+<% end %>

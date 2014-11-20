@@ -6,6 +6,10 @@ HerokuApp::Application.routes.draw do
 
 resources :articles
 
+resources :shopping
+
+resources :dinners
+
 get 'welcome/index'
   # Sample of regular route:
   #   match 'products/:id' => 'catalog#view'
