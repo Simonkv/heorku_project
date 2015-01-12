@@ -7,12 +7,15 @@
 		
 	</p>
 
-	<p style = "height: 30px;">
+	<p style = "height: 50px;">
 		<%= f.label "Price" %><br>
 		<%= f.text_field :price %>
 
 	</p>
 
+<p style= "height: 20px;">
+Hvem kjøpte dette?
+</p>
 	<p>
 		<%= f.radio_button(:person, "Simon") %>
 		<%= f.label(:person, "Simon", value: "Simon") %>

@@ -5,7 +5,7 @@ module ShoppingHelper
 	def hvem_skylder_hvem
 
 		alle_simon = Shopping.where(person: 'Simon')
-		pris_simon = alle_simon.map(&:price).reduce(0, :+) || 0
+		pris_simon = alle_simon.sum(:price)
 		
 		alle_joachim = Shopping.where(person: 'Joachim')
 		pris_joachim = alle_joachim.map(&:price).reduce(0, :+) || 0
