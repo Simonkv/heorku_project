@@ -1,14 +1,37 @@
+html {
+	width: 90%;
+	margin: auto;
+}
 
 img{
 	width: 90%;
 }
 
 footer{
-	background-color: #999999;
+	background-color: #999;
 	width:100%;
 	height: 300px;
 	padding-top: 10px;
 
+}
+
+.content {
+	aside.sidebar {
+		float: left;
+		width: 29%;
+	}
+
+	.main-content {
+		float: right;
+		width: 40%;
+		margin-right: 29%;
+	}
+
+	&:after {
+		clear: both;
+	}
+
+	overflow: hidden;
 }
 
 .new_link{
@@ -16,6 +39,8 @@ footer{
 	padding-bottom: 10px;
 	font-size: 20px;
 }
+
+
 
 .dinner_index{
 	padding-top: 10px;
@@ -108,6 +133,10 @@ table{
 
 p{
 	height: 100px;
+}
+
+.main_marg{
+	float:left;	
 }
 
 

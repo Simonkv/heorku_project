@@ -1,41 +1,46 @@
-
-<%= stylesheet_link_tag "application" %>
-<%= javascript_include_tag "application" %>
-	<%= csrf_meta_tags %>
-
+<!DOCTYPE html>
+<html>
 <head>
-  <title>HerokuApp</title>
-  
-
+	<%= stylesheet_link_tag "application" %>
+	<%= javascript_include_tag "application" %>
+	<%= csrf_meta_tags %>
+ 	<title>HerokuApp</title>
 </head>
 
-
-
-<header>
+<body>
 	<%= image_tag "mancave.png" %>
-</header>
 
-<h3>
-	<%= link_to "Who gotta do it!", articles_path %>
-</h3>
-<h3>
-	<%= link_to "Dinners", dinners_path %>
-</h3>
-<h3>
-	<%= link_to "Debt", "/shopping" %><br>
-	<%= hvem_skylder_hvem %>
-</h3>
+	<div class=content>
+		<aside class=sidebar>
+			<h3>
+				<%= link_to "Who gotta do it!", articles_path %>
+			</h3>
+			<h3>
+				<%= link_to "Dinners", dinners_path %>
+			</h3>
+			<h3>
+				<%= link_to "Debt", "/shopping" %><br>
+				<%= hvem_skylder_hvem %>
+			</h3>
+		</aside>
 
-<footer>
-	<%= link_to "Home", '/' %>
-	<%= link_to "WGDI", articles_path %>
-	<%= link_to "Dinners", dinners_path %>
-	<%= link_to "Debt", "/shopping" %>
-</footer>
+		<div class=main-content>
+			<h2>
+			RANDOM TEXT
+			</h2>
+			<p>
+				Lots of stuff is happening here mateeewrojwerjweorjwer
+				lorem ipsum
+				lorem ipsum DOCTYPE sidebar <acronym>yolo</acronym>
+			</p>
+		</div>
+	</div>
 
-
-
-
-
-
-
+	<footer>
+		<%= link_to "Home", '/' %>
+		<%= link_to "WGDI", articles_path %>
+		<%= link_to "Dinners", dinners_path %>
+		<%= link_to "Debt", "/shopping" %>
+	</footer>
+</body>
+</html>
